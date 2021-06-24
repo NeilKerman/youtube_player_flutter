@@ -315,9 +315,8 @@ class _YoutubePlayerState extends State<YoutubePlayer> {
             ),
           ),
           if (!controller.flags.hideThumbnail)
-            AnimatedOpacity(
+            Opacity(
               opacity: controller.value.isPlaying ? 0 : 1,
-              duration: const Duration(milliseconds: 300),
               child: widget.thumbnail ?? _thumbnail,
             ),
           if (!controller.value.isFullScreen &&
